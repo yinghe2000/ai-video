@@ -2,6 +2,13 @@ import speech_recognition as sr
 from pydub import AudioSegment
 import os
 
+"""
+How It Works:
+	The audio file is first converted to a WAV format since the SpeechRecognition library works best with WAV files.
+	The audio data is then processed by the Google Speech Recognition API to convert it to text.
+	The program then searches for the desired text in the converted text.
+"""
+
 def audio_to_text(audio_file):
     # Convert audio to the required format
     sound = AudioSegment.from_file(audio_file)
